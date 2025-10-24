@@ -126,6 +126,11 @@ body{
     color:#e86a33;
     font-weight: 600;
 }
+#hirono{
+    display: block;
+    width: 130px;
+    margin: 10px auto;  
+}
 button{
     background-color:#00cec9;
     color: white;

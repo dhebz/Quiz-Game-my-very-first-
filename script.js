@@ -14,6 +14,7 @@ const resultMessage= document.getElementById("resultmessage");
 const restartBtn= document.getElementById("restartbtn");
 const progressBar= document.getElementById("progress");
 const progressContainer = document.getElementById("progressBar");
+const hirono=document.getElementById("hirono");
 
 //Questions
 const quizQuestions=[
@@ -211,25 +212,20 @@ function showQuestion(){
     const percentage = (score/quizQuestions.length)*100;
 
     if(percentage === 100){
-        const img = document.createElement("img"); // 🧱 make an <img>
-            img.src = "hirono.png";      // 🖼️ where your image is
-            img.alt = "Hirono";                        // ♿ text if image doesn’t load
-            img.style.width = "80px";                 // 📏 optional size
-            img.style.width = "50px"; 
-            
-            img.style.display = "block";     
-            img.style.margin = "10px auto";
-
-            resultMessage.textContent = "Perfect! You're a coffee genius!"; 
-            resultMessage.appendChild(img);
-        } else if (percentage >= 80) {
+        resultMessage.textContent = "Perfect! You're a coffee genius!"; 
+        hirono.style.display ="block";
+     } else if (percentage >= 80) {
         resultMessage.textContent = "Great job! You know your stuff!";
+        hirono.style.display ="none";
     } else if (percentage >= 60) {
         resultMessage.textContent = "Good effort! Keep learning!";
+        hirono.style.display ="none";
     } else if (percentage >= 40) {
         resultMessage.textContent = "Not bad! Try again to improve!";
+        hirono.style.display ="none";
     } else {
         resultMessage.textContent = "Keep studying! You'll get better!";
+        hirono.style.display ="none";
     }
 }
 
